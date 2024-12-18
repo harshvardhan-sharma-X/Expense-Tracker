@@ -3,119 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker - README</title>
+    <title>ExpenseTracker.py - README</title>
 </head>
 <body>
+    <h1>💸 ExpenseTracker.py</h1>
+    
+<p><strong>ExpenseTracker.py</strong> is a simple, user-friendly command-line application to track and manage your personal expenses. This tool allows you to add expenses, view a summary of expenses, visualize spending habits, and generate expense reports.</p>
 
-<h1>📊 Expense Tracker</h1>
-
-<p>The <strong>Expense Tracker</strong> is a simple Python-based tool to manage personal expenses. It allows users to track, view, visualize, and generate reports of their expenses.</p>
-
-<hr>
-
-<h2>📦 Features</h2>
+<h2>📋 Features</h2>
 <ul>
-    <li>📝 <strong>Add Expense:</strong> Add new expenses with date, category, amount, and optional description.</li>
-    <li>📄 <strong>View Expenses:</strong> View a list of all recorded expenses.</li>
-    <li>📊 <strong>Visualize Expenses:</strong> View a pie chart of expenses categorized by type.</li>
-    <li>📈 <strong>Generate Report:</strong> View a summary report of total expenses and breakdown by category.</li>
+    <li>✅ Add new expenses with details like date, category, amount, and description.</li>
+    <li>📄 View all your recorded expenses in a tabular format.</li>
+    <li>📊 Visualize expenses by category using a pie chart.</li>
+    <li>📈 Generate a detailed expense report with total expenses and a category breakdown.</li>
 </ul>
 
-<hr>
-
-<h2>📂 Prerequisites</h2>
-<p>Make sure you have Python installed on your system. You will also need the following Python libraries:</p>
-<ul>
-    <li><code>pandas</code></li>
-    <li><code>matplotlib</code></li>
-</ul>
-
-<p>You can install the required libraries using pip:</p>
-<pre><code>pip install pandas matplotlib</code></pre>
-
-<hr>
-
-<h2>🚀 How to Run</h2>
+<h2>🛠️ Installation</h2>
 <ol>
-    <li>Clone the repository or copy the <code>ExpenseTracker</code> script.</li>
-    <li>Open a terminal or command prompt and navigate to the directory where the script is saved.</li>
-    <li>Run the script using the following command:</li>
-</ol>
-<pre><code>python expense_tracker.py</code></pre>
-
-<p>Follow the on-screen prompts to add, view, visualize, or generate reports of your expenses.</p>
-
-<hr>
-
-<h2>📘 Usage</h2>
-
-<ol>
-    <li>Upon running, you will see the following menu options:
-        <ul>
-            <li>1️⃣ <strong>Add Expense</strong> - Add a new expense.</li>
-            <li>2️⃣ <strong>View Expenses</strong> - View all your expenses in a tabular format.</li>
-            <li>3️⃣ <strong>Visualize Expenses</strong> - View a pie chart of expenses categorized by type.</li>
-            <li>4️⃣ <strong>Generate Report</strong> - Generate a summary of your total expenses and category-wise breakdown.</li>
-            <li>5️⃣ <strong>Exit</strong> - Exit the program.</li>
-        </ul>
+    <li>Ensure you have <strong>Python 3.x</strong> installed on your system.</li>
+    <li>Install the required libraries using the following command:
+        <pre><code>pip install pandas matplotlib</code></pre>
     </li>
-    <li>Enter the corresponding number to choose an option.</li>
+    <li>Download the <strong>ExpenseTracker.py</strong> file and place it in your desired directory.</li>
 </ol>
 
-<hr>
+<h2>🚀 Usage</h2>
+<ol>
+    <li>Run the script with the following command:
+        <pre><code>python ExpenseTracker.py</code></pre>
+        </li>
+        <li>Use the menu to navigate through the available options:
+            <ul>
+                <li>1️⃣ Add Expense</li>
+                <li>2️⃣ View Expenses</li>
+                <li>3️⃣ Visualize Expenses</li>
+                <li>4️⃣ Generate Report</li>
+                <li>5️⃣ Exit</li>
+            </ul>
+        </li>
+    </ol>
 
-<h2>📄 Code Structure</h2>
-<pre><code>.
-├── expense.csv  # CSV file where all expenses are stored (auto-created)
-└── expense_tracker.py  # Main Python script for the Expense Tracker
-</code></pre>
+<h2>📚 Example</h2>
+    <pre>
+    Personal Expense Tracker 
+    1. Add Expense
+    2. View Expenses
+    3. Visualize Expenses
+    4. Generate Report
+    5. Exit
+    
+Enter your choice (1-5): 1
+    Enter date (YYYY-MM-DD): 2024-12-18
+    Enter category (e.g., Food, Transport, Rent): Food
+    Enter amount: $15.50
+    Enter description (optional): Lunch at cafe
+    ✅ Expense added successfully!
+    </pre>
 
-<p>The script consists of the following key components:</p>
-<ul>
-    <li><strong>ExpenseTracker Class</strong>: Manages adding, viewing, visualizing, and generating reports for expenses.</li>
-    <li><strong>Main Function</strong>: Provides the user interface for interacting with the expense tracker.</li>
-</ul>
+<h2>📂 File Structure</h2>
+    <pre>
+    └── ExpenseTracker.py   # Main script file
+        └── expense.csv      # CSV file where your expenses are stored (auto-created if it does not exist)
+    </pre>
 
-<hr>
+<h2>🛠️ Methods</h2>
+    <ul>
+        <li><strong>add_expense(date, category, amount, description)</strong>: Adds a new expense entry.</li>
+        <li><strong>view_expenses()</strong>: Displays all expenses recorded in the CSV file.</li>
+        <li><strong>visualise_expenses()</strong>: Generates a pie chart to visualize expenses by category.</li>
+        <li><strong>generate_report()</strong>: Provides a detailed summary of expenses by category and total expenses.</li>
+    </ul>
 
-<h2>🔧 Methods</h2>
+<h2>📋 CSV File Format</h2>
+    <p>The expenses are stored in a CSV file named <strong>expense.csv</strong> in the following format:</p>
+    <pre>
+    Date,Category,Amount,Description
+    2024-12-18,Food,15.50,Lunch at cafe
+    2024-12-17,Transport,50.00,Uber ride
+    2024-12-16,Groceries,120.30,Weekly shopping
+    </pre>
 
-<h3>1. <code>add_expense(date, category, amount, description='')</code></h3>
-<p>Adds a new expense to the CSV file and updates the DataFrame.</p>
+<h2>📢 Important Notes</h2>
+    <ul>
+        <li>Make sure the <strong>expense.csv</strong> file is in the same directory as the <strong>ExpenseTracker.py</strong> script.</li>
+        <li>The CSV file is auto-generated if it does not exist, so no manual setup is required.</li>
+    </ul>
 
-<h3>2. <code>view_expenses()</code></h3>
-<p>Displays all expenses in a tabular format.</p>
+<h2>🤝 Contributing</h2>
+    <p>Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request.</p>
 
-<h3>3. <code>visualise_expenses()</code></h3>
-<p>Generates a pie chart of expenses categorized by type.</p>
-
-<h3>4. <code>generate_report()</code></h3>
-<p>Displays the total expenses and a breakdown by category.</p>
-
-<hr>
-
-<h2>📸 Screenshots</h2>
-<p><em>Example of Visualization (Pie Chart):</em></p>
-<img src="screenshot.png" alt="Expense Visualization Pie Chart" style="width:100%; max-width:600px;">
-
-<hr>
-
-<h2>💡 Possible Improvements</h2>
-<ul>
-    <li>✅ Add error handling for invalid inputs.</li>
-    <li>✅ Add ability to delete or edit expenses.</li>
-    <li>✅ Export reports in PDF or Excel format.</li>
-</ul>
-
-<hr>
-
-<h2>📜 License</h2>
-<p>This project is open-source and available under the <strong>MIT License</strong>.</p>
-
-<hr>
 
 <h2>📞 Contact</h2>
-<p>Have any questions or feedback? Feel free to reach out!</p>
-
+    <p>If you have any questions or issues, feel free to open an issue on the repository or reach out to the developer.</p>
 </body>
 </html>
